@@ -34,16 +34,13 @@
 
         .input-container {
             display: flex;
-            /* Use flexbox to align items horizontally */
             justify-content: center;
         }
 
         .input-field {
             padding: 15px;
             width: 50px;
-            /* Adjust the width for a smaller size */
             margin: 0 5px;
-            /* Horizontal spacing between input fields */
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -56,27 +53,6 @@
             border-color: #dc143c;
             outline: none;
         }
-
-        .custom-button {
-            padding: 15px 30px;
-            background-color: #dc143c;
-            color: white;
-            cursor: pointer;
-            border-radius: 8px;
-            text-align: center;
-            display: inline-block;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            margin-top: 20px;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .custom-button:hover {
-            background-color: #b0142d;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
     </style>
 </head>
 
@@ -84,13 +60,34 @@
     <div class="container">
         <h2>Enter the OTP</h2>
         <div class="input-container">
-            <input type="text" class="input-field" maxlength="1">
-            <input type="text" class="input-field" maxlength="1">
-            <input type="text" class="input-field" maxlength="1">
-            <input type="text" class="input-field" maxlength="1">
+            <input type="text" class="input-field" maxlength="1" oninput="moveToNext(this)">
+            <input type="text" class="input-field" maxlength="1" oninput="moveToNext(this)">
+            <input type="text" class="input-field" maxlength="1" oninput="moveToNext(this)">
+            <input type="text" class="input-field" maxlength="1" oninput="moveToNext(this)">
         </div>
-        <a href="https://letsgodriving.onelink.me/WmNF/7uhbzj01" class="custom-button">Verify OTP</a>
     </div>
+
+    <script>
+        function moveToNext(current) {
+            // Set the static OTP value
+            const staticOTP = "0000";
+            const inputs = document.querySelectorAll('.input-field');
+            const index = Array.from(inputs).indexOf(current);
+            // Fill the current input with the static value
+            current.value = staticOTP[index];
+
+            // Move to the next input field
+            if (index < inputs.length - 1) {
+                inputs[index + 1].focus();
+            } else {
+                // Check if the OTP is correct
+                if (Array.from(inputs).map(input => input.value).join('') === staticOTP) {
+                    // Redirect to the URL if OTP is correct
+                    window.location.href = "https://letsgodriving.onelink.me/WmNF/7uhbzj01";
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
