@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OTP Page</title>
+    <title>Define Your Role</title>
     <style>
         body,
         html {
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f4f4f4; /* Light background for the body */
             height: 100%;
             display: flex;
             justify-content: center;
@@ -19,7 +19,7 @@
         }
 
         .container {
-            background-color: #ffffff;
+            background-color: #2e2a72; /* Purplish dark blue for the card */
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -29,33 +29,18 @@
 
         h2 {
             margin-bottom: 20px;
-            color: #333333;
+            color: #ffffff; /* White text color for better contrast */
         }
 
-        .input-field {
-            padding: 15px;
-            width: 80%;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: border 0.3s ease;
-            font-size: 16px;
-        }
-
-        .input-field:focus {
-            border-color: #dc143c;
-            outline: none;
-        }
-
-        .custom-button {
+        .role-button {
             padding: 15px 30px;
-            background-color: #dc143c;
+            background-color: #dc143c; /* Red button color */
             color: white;
             cursor: pointer;
             border-radius: 8px;
             text-align: center;
-            display: inline-block;
+            display: block;
+            margin: 10px 0;
             text-decoration: none;
             font-size: 16px;
             font-weight: bold;
@@ -63,8 +48,8 @@
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .custom-button:hover {
-            background-color: #b0142d;
+        .role-button:hover {
+            background-color: #b0142d; /* Darker red on hover */
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
     </style>
@@ -72,9 +57,9 @@
 
 <body>
     <div class="container">
-        <h2>Enter Your Phone Number</h2>
-        <input type="text" class="input-field" placeholder="Phone Number">
-        <a href="otpconfirmation.html" class="custom-button">Submit OTP</a>
+        <h2>Define Your Role</h2>
+        <a href="https://letsgodriving.onelink.me/WmNF/7uhbzj01" class="role-button">Student</a>
+        <a href="otpconfirmation.html" class="role-button">Trainer</a>
     </div>
 </body>
 

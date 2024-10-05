@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f4f4f4; /* Light background for the body */
             height: 100%;
             display: flex;
             justify-content: center;
@@ -19,7 +19,7 @@
         }
 
         .container {
-            background-color: #ffffff;
+            background-color: #2e2a72; /* Purplish dark blue for the card */
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -29,7 +29,7 @@
 
         h2 {
             margin-bottom: 20px;
-            color: #333333;
+            color: #ffffff; /* White text color for better contrast */
         }
 
         .input-container {
@@ -47,10 +47,11 @@
             transition: border 0.3s ease;
             font-size: 16px;
             text-align: center;
+            color: #333333; /* Dark color for input text */
         }
 
         .input-field:focus {
-            border-color: #dc143c;
+            border-color: #dc143c; /* Red border on focus */
             outline: none;
         }
     </style>
@@ -58,7 +59,7 @@
 
 <body>
     <div class="container">
-        <h2>Enter the OTP</h2>
+        <h2>Enter your trainer pin code</h2>
         <div class="input-container">
             <input type="text" class="input-field" maxlength="1" oninput="moveToNext(this)">
             <input type="text" class="input-field" maxlength="1" oninput="moveToNext(this)">
